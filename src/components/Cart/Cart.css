@@ -1,0 +1,29 @@
+.cart {
+  margin-top: 20px;
+  background-color: #ffe0b3;
+  padding: 20px 10px;
+  height: 77vh;
+  border-radius: 4px;
+  position: fixed;
+}
+.clear-btn,
+.review-btn {
+  width: 232px;
+  height: 42px;
+  background-color: #ff3030;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border-radius: 4px;
+  border: none;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+.review-btn {
+  background-color: #ff9900;
+}
+.clear-btn p,
+.review-btn p {
+  margin-right: 5px;
+}
