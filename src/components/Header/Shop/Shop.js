@@ -8,11 +8,14 @@ const Shop = () => {
         .then(res=>res.json())
         .then(data=>setProducts(data))
     }, [])
+    const addToCart=(item)=>{
+        console.log(item);
+    }
     return (
         <div className='shop-container'>
             <div className="products-container">
             {
-                products.map(product=> <Product key={product.id} product={product}></Product>)
+                products.map(product=> <Product key={product.id} product={product} addToCart={()=>{addToCart(product)}}></Product>)
             }
             </div>
             <div className="cart-container">

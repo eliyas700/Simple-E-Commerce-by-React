@@ -1,6 +1,6 @@
 .product {
   width: 300px;
-  height: 513px;
+  height: 510px;
   border: 1px solid #95a0a7;
   box-sizing: border-box;
   border-radius: 8px;
@@ -23,7 +23,7 @@
   font-style: normal;
   font-weight: 400;
   text-align: left;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   font-weight: bold;
 }
 .product-info p {
