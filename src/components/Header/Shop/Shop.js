@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { addToDb } from '../../../utilities/fakedb';
+import { addToDb, searchInLocal } from '../../../utilities/fakedb';
 import Cart from '../../Cart/Cart';
 import Product from '../../Product/Product';
 import './Shop.css'
@@ -11,6 +11,13 @@ const Shop = () => {
         .then(res=>res.json())
         .then(data=>setProducts(data))
     }, [])
+    useEffect(()=>{
+        const storedItems=searchInLocal()
+        for(const item in storedItems){
+            const findFromDB=products.find(product=>product.id===item);
+            console.log(findFromDB);
+        }
+    },[])
     const addToCart=(item)=>{ 
         const newCart=[...cart,item]
         setCart(newCart)
