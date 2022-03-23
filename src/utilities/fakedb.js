@@ -43,6 +43,7 @@ const searchInLocal=()=>{
 }
 const deleteShoppingCart = () =>{
     localStorage.removeItem('shopping-cart');
+    window.location.reload()
 }
 
 export {
