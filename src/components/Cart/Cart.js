@@ -21,7 +21,7 @@ const Cart = ({cart}) => {
                 <p>Total-Price:$ {total} </p>
                 <p>Shipping-Total:$ {shipping}</p>
                 <p>Tax: $ {tax}</p>
-                <h5>Grand-Total: $ {grandTotal}</h5>
+                <h5>Grand-Total: $ {grandTotal.toFixed(2)}</h5>
                 <button className='clear-btn'><p>Clear Cart</p>
                     <FontAwesomeIcon icon={faTrashCan}></FontAwesomeIcon>
                 </button>
