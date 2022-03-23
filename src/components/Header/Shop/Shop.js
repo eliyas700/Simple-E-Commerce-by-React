@@ -13,11 +13,18 @@ const Shop = () => {
     }, [])
     useEffect(()=>{
         const storedItems=searchInLocal()
+        const savedCart=[];
         for(const item in storedItems){
             const findFromDB=products.find(product=>product.id===item);
-            console.log(findFromDB);
+            if(findFromDB){
+                const quantity = storedItems[item];
+                findFromDB.quantity=quantity;
+                savedCart.push(findFromDB)
+
+            }
         }
-    },[])
+        setCart(savedCart)
+    },[products])
     const addToCart=(item)=>{ 
         const newCart=[...cart,item]
         setCart(newCart)
