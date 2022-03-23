@@ -4,7 +4,8 @@
   padding: 20px 10px;
   height: 77vh;
   border-radius: 4px;
-  position: fixed;
+  position: sticky;
+  top: 0;
 }
 .clear-btn,
 .review-btn {
@@ -19,6 +20,7 @@
   border: none;
   margin-bottom: 20px;
   font-size: 16px;
+  cursor: pointer;
 }
 .review-btn {
   background-color: #ff9900;
