@@ -1,13 +1,12 @@
-
-import './App.css';
-import Header from './components/Header/Header';
-import Shop from './components/Header/Shop/Shop';
-
+import "./App.css";
+import Header from "./components/Header/Header";
+import Shop from "./components/Header/Shop/Shop";
+import { Routes, Route, Link } from "react-router-dom";
 function App() {
   return (
-    <div >
-     <Header></Header>
-     <Shop></Shop>
+    <div>
+      <Header></Header>
+      <Shop></Shop>
     </div>
   );
 }
