@@ -6,6 +6,12 @@
     border-radius: 10px;
    
 }
+.cart-product button{
+    
+    width:45px;
+    height:45px;
+    border-radius: 50%;
+}
 .cart-product img{
     width:90px;
     height:90px;
