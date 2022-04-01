@@ -4,7 +4,9 @@ import { faArrowRight, faTrashCan } from "@fortawesome/free-solid-svg-icons";
 import "./Cart.css";
 import { deleteShoppingCart } from "../../utilities/fakedb";
 import { Link } from "react-router-dom";
-const Cart = ({ cart }) => {
+const Cart = (props) => {
+  console.log(props.children);
+  const { cart } = props;
   // console.log(cart);
   let total = 0;
   let shipping = 0;
@@ -30,15 +32,7 @@ const Cart = ({ cart }) => {
         Clear Cart
         <FontAwesomeIcon className="ms-1" icon={faTrashCan}></FontAwesomeIcon>
       </button>
-      <Link to="/order">
-        <button className="review-btn   ">
-          Review Order
-          <FontAwesomeIcon
-            className="ms-1"
-            icon={faArrowRight}
-          ></FontAwesomeIcon>
-        </button>
-      </Link>
+      <p>{props.children}</p>
     </div>
   );
 };

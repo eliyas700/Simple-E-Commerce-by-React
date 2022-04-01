@@ -11,10 +11,10 @@ const ReviewItem = (props) => {
           <img src={item.img} alt="" />
           <div className=" ps-2">
             <small className="fw-bold" title={item.name}>
-              {item.name}
-              {/* {item.name.length > 25
+              {/* {item.name} */}
+              {item.name.length > 25
                 ? item.name.slice(0, 25) + "......"
-                : item.name} */}
+                : item.name}
             </small>
             <p className="p-0 m-0">
               Price:
