@@ -1,0 +1,24 @@
+.cart-product{
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 10px 10px 20px #3e3e3e;
+    width:571px;
+    border-radius: 10px;
+   
+}
+.cart-product img{
+    width:90px;
+    height:90px;
+}
+.product-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+   
+
+}
+.shop-container{
+    display: flex;
+    justify-content: space-around;
+}
