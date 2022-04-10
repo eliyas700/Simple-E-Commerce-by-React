@@ -1,7 +1,8 @@
 .form-container {
     width: 500px;
-    height: 600px;
+    height: auto;
     background: #FFFFFF;
+    padding-bottom: 20px;
     border: 1px solid #95A0A7;
     box-sizing: border-box;
     border-radius: 8px;
