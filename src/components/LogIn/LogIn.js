@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
 import "./LogIn.css";
 const LogIn = () => {
@@ -17,10 +17,12 @@ const LogIn = () => {
     signInWithEmailAndPassword(email, password);
   };
   const navigate = useNavigate();
+  const location = useLocation();
+  let from = location.state?.from?.pathname || "/";
   // if (user) {
   //   navigate("/shop");
   // }
-  user && navigate("/shop");
+  user && navigate(from, { replace: true });
   return (
     <div className="form-container">
       <div>

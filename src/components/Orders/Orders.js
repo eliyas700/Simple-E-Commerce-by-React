@@ -30,7 +30,7 @@ const Orders = () => {
       </div>
       <div className="cart-container">
         <Cart cart={cart}>
-          <Link to="/inventory" style={{ textDecoration: "none" }}>
+          <Link to="/shipping" style={{ textDecoration: "none" }}>
             <button className="review-btn">
               CheckOut Order{" "}
               <FontAwesomeIcon className="ms-1" icon={faTruckArrowRight} />

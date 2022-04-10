@@ -7,6 +7,7 @@
   padding-left: 140px;
   padding-right: 140px;
 }
+
 .header a {
   color: #ffffff;
   font-size: 17px;
@@ -14,6 +15,14 @@
   margin-left: 36px;
   transition: color 0.5s ease-in-out;
 }
+
 .header a:hover {
   color: orange;
+}
+
+.signOutbtn {
+  background: transparent;
+  margin-left: 10px;
+  border: none;
+  color: wheat;
 }
