@@ -1,6 +1,9 @@
 import React, { useState } from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../firebase.init";
 
 const Shipping = () => {
+  const [user] = useAuthState(auth);
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [password, setAddress] = useState("");
@@ -45,6 +48,8 @@ const Shipping = () => {
               type="email"
               name="email"
               id="email"
+              value={user?.email}
+              readOnly
               placeholder="Type Your Email"
               required
             />

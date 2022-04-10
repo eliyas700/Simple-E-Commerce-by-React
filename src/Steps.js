@@ -8,14 +8,21 @@
 7 npm install --save react-firebase-hooks
 8 useCreateUserWithEmailPassword From React Firebase Hooks
 9 If user Is already Created Redirect to the Log in Page By Link
-10 useSignInWithEmailPassword from React firebase hooks to Sign In
-
-
-
+10 useSignInWithEmailPassword from React firebase hooks to Sign In by Using Email, Password
+11 Create RequireAuth Component to protect some Protected Components
+12 In route use Protected Components inside the RequireAuth
 
 
 */
 
 /**
- *
+ * FireBase Hosting Steps
+ * npm install -g firebase-tools(One Time in Computer Or Windows Life Time)
+ *firebase login(One Time in Computer Or Windows Life Time)
+ * firebase init (One Time For Each Project)
+ * npm run build(Each time we want to Deploy)
+ * firebase deploy (Each time we want to Deploy)
+
+ 
+
  */
