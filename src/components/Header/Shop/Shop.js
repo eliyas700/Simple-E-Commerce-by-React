@@ -15,7 +15,7 @@ const Shop = () => {
     const storedItems = searchInLocal();
     const savedCart = [];
     for (const item in storedItems) {
-      const findFromDB = products.find((product) => product.id === item);
+      const findFromDB = products.find((product) => product._id === item);
       if (findFromDB) {
         const quantity = storedItems[item];
         findFromDB.quantity = quantity;
@@ -26,25 +26,25 @@ const Shop = () => {
   }, [products]);
   const addToCart = (item) => {
     let newCart = [];
-    const existedItems = cart.find((prod) => prod.id === item.id);
+    const existedItems = cart.find((prod) => prod._id === item._id);
     if (!existedItems) {
       item.quantity = 1;
       newCart = [...cart, item];
     } else {
-      const unexistedItems = cart.filter((pro) => pro.id !== item.id);
+      const unexistedItems = cart.filter((pro) => pro._id !== item._id);
       // console.log(unexistedItems, "Uniesxisted");
       existedItems.quantity = existedItems.quantity + 1;
       newCart = [...unexistedItems, existedItems];
     }
     setCart(newCart);
-    addToDb(item.id);
+    addToDb(item._id);
   };
   return (
     <div className="shop-container">
       <div className="products-container">
         {products.map((product) => (
           <Product
-            key={product.id}
+            key={product._id}
             product={product}
             addToCart={addToCart}
             addToDb={addToDb}
